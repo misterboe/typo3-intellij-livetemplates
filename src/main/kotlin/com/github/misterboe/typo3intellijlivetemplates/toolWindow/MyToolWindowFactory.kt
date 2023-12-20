@@ -1,4 +1,4 @@
-package com.github.misterboe.typo3intellijlivetemplates.toolWindow
+package com.github.misterboe.typo3livetemplates.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.misterboe.typo3intellijlivetemplates.MyBundle
-import com.github.misterboe.typo3intellijlivetemplates.services.MyProjectService
+import com.github.misterboe.typo3livetemplates.MyBundle
+import com.github.misterboe.typo3livetemplates.services.MyProjectService
 import javax.swing.JButton
 
 

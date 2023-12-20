@@ -1,4 +1,4 @@
-package com.github.misterboe.typo3intellijlivetemplates.listeners
+package com.github.misterboe.typo3livetemplates.listeners
 
 import com.intellij.openapi.application.ApplicationActivationListener
 import com.intellij.openapi.diagnostic.thisLogger

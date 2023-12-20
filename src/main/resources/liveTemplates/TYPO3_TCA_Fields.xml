@@ -1,0 +1,196 @@
+<templateSet group="TYPO3 TCA Field types (config &gt; type)">
+  <template name="TCA | type | input | default" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'behaviour' =&gt; [&#10;            'allowLanguageSynchronization' =&gt; true,&#10;        ],&#10;    ],&#10;]," description="Simple input field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Input Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | placeholder" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'placeholder' =&gt; '__row|input_26',&#10;        'eval' =&gt; 'null',&#10;        'default' =&gt; null,&#10;        'mode' =&gt; 'useOrOverridePlaceholder',&#10;    ],&#10;]," description="Input with placeholder and null handling" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Input with Placeholder&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | value slider" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'size' =&gt; 10,&#10;        'eval' =&gt; 'trim,int',&#10;        'range' =&gt; [&#10;            'lower' =&gt; -90,&#10;            'upper' =&gt; 90,&#10;        ],&#10;        'default' =&gt; 0,&#10;        'slider' =&gt; [&#10;            'step' =&gt; 10,&#10;            'width' =&gt; 200,&#10;        ],&#10;    ],&#10;]," description="Value slider" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Value Slider&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | value picker" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'size' =&gt; 10,&#10;        'eval' =&gt; 'trim,int',&#10;        'range' =&gt; [&#10;            'lower' =&gt; $lower$,&#10;            'upper' =&gt; $upper$,&#10;        ],&#10;        'default' =&gt; 0,&#10;        'slider' =&gt; [&#10;            'step' =&gt; $step$,&#10;            'width' =&gt; $stepwidth$,&#10;        ],&#10;    ],&#10;]," description="Value picker" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Value Picker&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="lower" expression="" defaultValue="&quot;-100&quot;" alwaysStopAt="true" />
+    <variable name="upper" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <variable name="step" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="stepwidth" expression="" defaultValue="&quot;200&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | colorpicker" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'renderType' =&gt; 'colorpicker',&#10;        'size' =&gt; 10,&#10;    ],&#10;]," description="Color picker field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Colorpicker&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | dateTime" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'renderType' =&gt; 'inputDateTime',&#10;        'eval' =&gt; 'datetime',&#10;    ],&#10;]," description="Date and time picker field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Datepicker&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | input | link" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'input',&#10;        'renderType' =&gt; 'inputLink',&#10;    ],&#10;]," description="Link field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Link Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | check | default" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;      'type' =&gt; 'check',&#10;      'items' =&gt; [&#10;         ['$checklabel$', '$checkvalue$'],&#10;      ],&#10;    ]&#10;]," description="Simple checkbox With label" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Checkbox&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="checklabel" expression="" defaultValue="&quot;Enable&quot;" alwaysStopAt="true" />
+    <variable name="checkvalue" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | check | multiple" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;      'type' =&gt; 'check',&#10;      'items' =&gt; [&#10;         // label, value&#10;         ['$checklabel$', '$checkvalue$'],&#10;         ['$checklabel2$', '$checkvalue2$'],&#10;         ['$checklabel3$', '$checkvalue3$'],&#10;         ['$checklabel4$', '$checkvalue4$'],&#10;      ],&#10;      'cols' =&gt; '3',&#10;    ],&#10;]," description="Four checkboxes in three columns" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Multi Checkbox&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="checklabel" expression="" defaultValue="&quot;Option 1&quot;" alwaysStopAt="true" />
+    <variable name="checkvalue" expression="" defaultValue="&quot;option1&quot;" alwaysStopAt="true" />
+    <variable name="checklabel2" expression="" defaultValue="&quot;Option 2&quot;" alwaysStopAt="true" />
+    <variable name="checkvalue2" expression="" defaultValue="&quot;option2&quot;" alwaysStopAt="true" />
+    <variable name="checklabel3" expression="" defaultValue="&quot;Option 3&quot;" alwaysStopAt="true" />
+    <variable name="checkvalue3" expression="" defaultValue="&quot;option3&quot;" alwaysStopAt="true" />
+    <variable name="checklabel4" expression="" defaultValue="&quot;Option 4&quot;" alwaysStopAt="true" />
+    <variable name="checkvalue4" expression="" defaultValue="&quot;option4&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | check | toggle default" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;      'type' =&gt; 'check',&#10;      'renderType' =&gt; 'checkboxToggle',&#10;      'items' =&gt; [&#10;         [&#10;            0 =&gt; '$0$',&#10;            1 =&gt; '$1$',&#10;         ]&#10;      ],&#10;    ]&#10;]," description="Single checkbox With toggle" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Toggle Box&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+    <variable name="1" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | check | toggle labeled" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;      'type' =&gt; 'check',&#10;      'renderType' =&gt; 'checkboxLabeledToggle',&#10;      'items' =&gt; [&#10;         [&#10;            0 =&gt; '$0$',&#10;            1 =&gt; '$1$',&#10;            'labelChecked' =&gt; '$Enabled$',&#10;            'labelUnchecked' =&gt; '$Disabled$',&#10;         ]&#10;      ],&#10;    ]&#10;]," description="Single checkbox with labeled toggle inverted state display" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Toggle Box with Label&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="Enabled" expression="" defaultValue="&quot;Enabled&quot;" alwaysStopAt="true" />
+    <variable name="Disabled" expression="" defaultValue="&quot;Disabled&quot;" alwaysStopAt="true" />
+    <variable name="1" expression="camelCase(Enabled)" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <variable name="0" expression="camelCase(Disabled)" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | text | default" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'text',&#10;        'cols' =&gt; 40,&#10;        'rows' =&gt; 15&#10;    ]&#10;]," description="Simple text area" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Text Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | text | rte" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'text',&#10;        'enableRichtext' =&gt; true,&#10;        'richtextConfiguration' =&gt; 'default'&#10;    ],&#10;]," description="Rich text editor field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;RTE Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | inline | fal" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(&#10;        '$db$',&#10;        [&#10;            'maxitems' =&gt; $1$,&#10;            'appearance' =&gt; [&#10;                'createNewRelationLinkTitle' =&gt; '$selectbutton$'&#10;            ],&#10;            'overrideChildTca' =&gt; [&#10;                'types' =&gt; [&#10;                    '0' =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ],&#10;                    \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ],&#10;                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ],&#10;                    \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.audioOverlayPalette;audioOverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ],&#10;                    \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.videoOverlayPalette;videoOverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ],&#10;                    \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION =&gt; [&#10;                        'showitem' =&gt; '&#10;                                        --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,&#10;                                        --palette--;;filePalette'&#10;                    ]&#10;                ],&#10;            ],&#10;        ],&#10;        $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']&#10;    ),&#10;]," description="A typical FAL relation" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Fal File Relation&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="1" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <variable name="selectbutton" expression="" defaultValue="&quot;Select Image&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | select | selectSingle" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'select',&#10;        'renderType' =&gt; 'selectSingle',&#10;        'items' =&gt; [&#10;            ['Static values', '--div--'],&#10;            ['Value 1', 1],&#10;            ['Value 2', 2],&#10;            ['TT-Content Elements', '--div--'],&#10;        ],&#10;        'foreign_table' =&gt; 'tt_content',&#10;        'foreign_table_where' =&gt; 'AND {#tt_content}.{#hidden} = 1 ORDER BY uid',&#10;        'foreign_table_prefix' =&gt; 'A prefix: ',&#10;    ],&#10;]," description="Simple checkbox With label" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Select Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | select | foreign_table" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'select',&#10;        'renderType' =&gt; 'selectSingle',&#10;        'foreign_table' =&gt; 'tt_content',&#10;        'fieldWizard' =&gt; [&#10;            'selectIcons' =&gt; [&#10;                'disabled' =&gt; false,&#10;            ],&#10;        ],&#10;    ],&#10;]," description="Select foreign rows with icons" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Select Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | select | selectSingle list" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'select',&#10;        'renderType' =&gt; 'selectSingle',&#10;        'items' =&gt; [&#10;            ['Divider 1', '--div--'],&#10;            ['Item 1', 1],&#10;            ['Item 2', 2],&#10;            ['Divider 2', '--div--'],&#10;            ['Item 3', 3],&#10;        ],&#10;        'size' =&gt; 6,&#10;    ],&#10;]," description="Select a single value from a list of elements" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Select Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | select | selectSingleBox" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;        'type' =&gt; 'select',&#10;        'renderType' =&gt; 'selectSingleBox',&#10;        'items' =&gt; [&#10;            ['Divider 1', '--div--'],&#10;            ['Item 1', 1],&#10;            ['Item 2', 2],&#10;            ['Divider 2', '--div--'],&#10;            ['Item 3', 3],&#10;        ],&#10;    ],&#10;]," description="Select a single value from a list of elements" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Select Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | select | selectCheckBox" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; [&#10;      'type' =&gt; 'select',&#10;      'renderType' =&gt; 'selectCheckBox',&#10;      'items' =&gt; [&#10;         '0' =&gt; [&#10;            '0' =&gt; 'foo 1',&#10;            '1' =&gt; 1,&#10;            '2' =&gt; '',&#10;            '3' =&gt; 'group1',&#10;         ],&#10;         '1' =&gt; [&#10;            '0' =&gt; 'foo 2',&#10;            '1' =&gt; 2,&#10;            '2' =&gt; 'EXT:styleguide/Resources/Public/Icons/tx_styleguide.svg',&#10;            '3' =&gt; 'group1',&#10;         ],&#10;         '2' =&gt; [&#10;            '0' =&gt; 'foo 3',&#10;            '1' =&gt; 3,&#10;            '2' =&gt; 'EXT:styleguide/Resources/Public/Icons/tx_styleguide.svg',&#10;         ],&#10;         '3' =&gt; [&#10;            '0' =&gt; 'foo 4',&#10;            '1' =&gt; 4,&#10;         ],&#10;         '4' =&gt; [&#10;            '0' =&gt; 'foo 5',&#10;            '1' =&gt; 1,&#10;            '2' =&gt; '',&#10;            '3' =&gt; 'group3',&#10;         ],&#10;      ],&#10;      'itemGroups' =&gt; [&#10;         'group1' =&gt; 'Group 1 with items',&#10;         'group2' =&gt; 'Group 2 with no items',&#10;         'group3' =&gt; 'Group 3 with items',&#10;      ],&#10;    ],&#10;]," description="Select values from a checkbox list" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Select Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | inline | 1:n" value="'$db$' =&gt; [&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'exclude' =&gt; 0,&#10;    'config' =&gt; [&#10;        'type' =&gt; 'inline',&#10;        'foreign_table' =&gt; '$foreigntable$',&#10;        'foreign_field' =&gt; '$foreignfield$',&#10;        'maxitems' =&gt; $1$,&#10;        'appearance' =&gt; [&#10;            'collapseAll' =&gt; true,&#10;            'useSortable' =&gt; true,&#10;            'showSynchronizationLink' =&gt; false,&#10;            'showAllLocalizationLink' =&gt; true,&#10;            'showPossibleLocalizationRecords' =&gt; false,&#10;            'showRemovedLocalizationRecords' =&gt; false,&#10;            'expandSingle' =&gt; true,&#10;            'enabledControls' =&gt; [&#10;                'localize' =&gt; true,&#10;            ],&#10;        ],&#10;        'behaviour' =&gt; [&#10;            'mode' =&gt; 'select',&#10;        ],&#10;    ],&#10;]," description="IRRE: This combines a table companies with persons (employees):" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Fal File Relation&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="foreigntable" expression="" defaultValue="&quot;tx_table&quot;" alwaysStopAt="true" />
+    <variable name="foreignfield" expression="" defaultValue="&quot;foreignfield&quot;" alwaysStopAt="true" />
+    <variable name="1" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | type | sharedconfig" value="'$db$' =&gt; [&#10;    'exclude' =&gt; 1,&#10;    'label' =&gt; '$label$',&#10;    'description' =&gt; '$description$',&#10;    'config' =&gt; $GLOBALS['TCA']['tt_content']['columns']['$fiedltocatch$']['config'],&#10;]," description="Uses config of an exiting field" toReformat="true" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="&quot;Input Field&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="camelCase(label)" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true" />
+    <variable name="fiedltocatch" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

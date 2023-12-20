@@ -1,18 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.misterboe.typo3intellijlivetemplates</id>
-    <name>typo3-intellij-livetemplates Template</name>
-    <vendor>misterboe</vendor>
+    <id>com.github.misterboe.typo3livetemplates</id>
+    <name>TYPO3 Live Templates</name>
+    <vendor url="https://www.analog.de">analog</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.misterboe.typo3intellijlivetemplates.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <defaultLiveTemplates file="/liveTemplates/TYPO3_FLUID_EMMETS.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/TYPO3_TCA_Fields.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/TYPO3_TCA_Overrides.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/TYPO3_Typoscript.xml"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.misterboe.typo3intellijlivetemplates.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <description>
+        TYPO3 Live Templates: This plugin is currently under development. The goal is to provide as many TCA fields as possible, and possibly other snippets as well.
+    </description>
 </idea-plugin>

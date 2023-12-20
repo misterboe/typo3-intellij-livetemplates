@@ -1,9 +1,9 @@
-package com.github.misterboe.typo3intellijlivetemplates.services
+package com.github.misterboe.typo3livetemplates.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.misterboe.typo3intellijlivetemplates.MyBundle
+import com.github.misterboe.typo3livetemplates.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

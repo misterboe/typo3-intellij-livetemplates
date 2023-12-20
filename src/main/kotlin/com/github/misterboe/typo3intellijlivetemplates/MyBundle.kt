@@ -1,4 +1,4 @@
-package com.github.misterboe.typo3intellijlivetemplates
+package com.github.misterboe.typo3livetemplates
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

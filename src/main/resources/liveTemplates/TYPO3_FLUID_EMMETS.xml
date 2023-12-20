@@ -1,0 +1,13 @@
+<templateSet group="TYPO3 Fluid Emmets">
+  <template name="f:d" value="&lt;f:debug&gt;{_all}&lt;/f:debug&gt;" description="&lt;f:debug&gt;{_all}&lt;/f:debug&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="f:c" value="&lt;script&gt;&#10;    var all = {_all -&gt; f:format.json() -&gt; f:format.raw()};&#10;    console.log(all);&#10;&lt;/script&gt;" description="console.log(all);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
