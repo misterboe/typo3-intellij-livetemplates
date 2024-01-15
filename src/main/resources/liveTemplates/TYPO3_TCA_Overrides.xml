@@ -5,17 +5,31 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="TCA | columnsOverrides | tt_content | cType" value="$GLOBALS['TCA']['$table$']['types']['$cType$']['columnsOverrides'] = [&#10;    'header' =&gt; ['config' =&gt; ['eval' =&gt; 'required']],&#10;    'bodytext' =&gt; [&#10;        'config' =&gt; [&#10;            'enableRichtext' =&gt; true,&#10;            'richtextConfiguration' =&gt; 'default'&#10;        ],&#10;    ],&#10;    'assets' =&gt; [&#10;        'config' =&gt; [&#10;            'type' =&gt; 'file',&#10;            'maxitems' =&gt; 1,&#10;            'allowed' =&gt; 'common-image-types'&#10;        ],&#10;    ],&#10;];" description="Example how to override existing fields for a single cType" toReformat="false" toShortenFQNames="true">
+  <template name="TCA | columnsOverrides | cType | cType" value="$GLOBALS['TCA']['$table$']['types']['$cType$']['columnsOverrides'] = [&#10;    'header' =&gt; ['config' =&gt; ['eval' =&gt; 'required']],&#10;    'bodytext' =&gt; [&#10;        'config' =&gt; [&#10;            'enableRichtext' =&gt; true,&#10;            'richtextConfiguration' =&gt; 'default'&#10;        ],&#10;    ],&#10;    'assets' =&gt; [&#10;        'config' =&gt; [&#10;            'type' =&gt; 'file',&#10;            'maxitems' =&gt; 1,&#10;            'allowed' =&gt; 'common-image-types'&#10;        ],&#10;    ],&#10;];" description="Example how to override existing fields for a single cType" toReformat="false" toShortenFQNames="true">
     <variable name="table" expression="" defaultValue="&quot;tt_content&quot;" alwaysStopAt="true" />
     <variable name="cType" expression="" defaultValue="&quot;textpic&quot;" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="TCA | columnsOverrides | tt_content | cropVariants" value="$GLOBALS['TCA']['$tt_content$']['types']['$ctype$']['columnsOverrides']['$fal_field$']['config']['overrideChildTca']['columns']['crop']['config'] = [&#10;    'cropVariants' =&gt; [&#10;        'default' =&gt; [&#10;            'title' =&gt; '1:1',&#10;            'allowedAspectRatios' =&gt; [&#10;                'NaN' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '16:9' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '4:5' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '5:4' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                'default' =&gt; [&#10;                    'title' =&gt; '1:1',&#10;                    'value' =&gt; 1,&#10;                ],&#10;            ],&#10;        ],&#10;    ],&#10;];" description="Override cropVariants for tt_content fal field" toReformat="false" toShortenFQNames="true">
+  <template name="TCA | columnsOverrides | cType | cropVariants" value="$GLOBALS['TCA']['$tt_content$']['types']['$ctype$']['columnsOverrides']['$fal_field$']['config']['overrideChildTca']['columns']['crop']['config'] = [&#10;    'cropVariants' =&gt; [&#10;        'default' =&gt; [&#10;            'title' =&gt; '1:1',&#10;            'allowedAspectRatios' =&gt; [&#10;                'NaN' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '16:9' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '4:5' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                '5:4' =&gt; [&#10;                    'disabled' =&gt; true,&#10;                ],&#10;                'default' =&gt; [&#10;                    'title' =&gt; '1:1',&#10;                    'value' =&gt; 1,&#10;                ],&#10;            ],&#10;        ],&#10;    ],&#10;];" description="Override cropVariants for tt_content fal field" toReformat="false" toShortenFQNames="true">
     <variable name="tt_content" expression="" defaultValue="&quot;tt_content&quot;" alwaysStopAt="true" />
     <variable name="ctype" expression="" defaultValue="&quot;textpic&quot;" alwaysStopAt="true" />
     <variable name="fal_field" expression="" defaultValue="&quot;assets&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | columnsOverrides | cType | bodytext" value="$GLOBALS['TCA']['$table$']['types']['$cType$']['columnsOverrides']['bodytext']['config']['enableRichtext'] = true;&#10;$GLOBALS['TCA']['$table$']['types']['$cType$']['columnsOverrides']['bodytext']['config']['richtextConfiguration'] = 'default';&#10;" description="Enable RTE" toReformat="false" toShortenFQNames="true">
+    <variable name="table" expression="" defaultValue="&quot;tt_content&quot;" alwaysStopAt="true" />
+    <variable name="cType" expression="" defaultValue="&quot;textpic&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="TCA | columnsOverrides | cType | header" value="$GLOBALS['TCA']['$table$']['types']['$cType$']['columnsOverrides']['header']['config']['required'] = true;&#10;" description="Set header required" toReformat="false" toShortenFQNames="true">
+    <variable name="table" expression="" defaultValue="&quot;tt_content&quot;" alwaysStopAt="true" />
+    <variable name="cType" expression="" defaultValue="&quot;textpic&quot;" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>

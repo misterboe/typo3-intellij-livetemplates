@@ -1,5 +1,5 @@
 <templateSet group="TYPO3 Typoscript">
-    <template name="Typoscript | dataProcessing | FilesProcessor" value="dataProcessing {&#10;    20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor&#10;    20 {&#10;        references.fieldName = $fieldname$&#10;        as = $items$&#10;    }&#10;}" description="This data processor can be used for processing file information" toReformat="true" toShortenFQNames="true">
+    <template name="Typoscript | dataProcessing | FilesProcessor" value="dataProcessing {&#10;    20 = files&#10;    20 {&#10;        references.fieldName = $fieldname$&#10;        as = $items$&#10;    }&#10;}" description="This data processor can be used for processing file information" toReformat="true" toShortenFQNames="true">
         <variable name="fieldname" expression="" defaultValue="&quot;assets&quot;" alwaysStopAt="true" />
         <variable name="items" expression="" defaultValue="&quot;assets&quot;" alwaysStopAt="true" />
         <context>
@@ -7,7 +7,6 @@
             <option name="CSS" value="false" />
             <option name="CUCUMBER_FEATURE_FILE" value="false" />
             <option name="CoffeeScript" value="false" />
-            <option name="ECMAScript6" value="false" />
             <option name="HAML" value="false" />
             <option name="HTML" value="false" />
             <option name="Handlebars" value="false" />
@@ -29,7 +28,6 @@
             <option name="CSS" value="false" />
             <option name="CUCUMBER_FEATURE_FILE" value="false" />
             <option name="CoffeeScript" value="false" />
-            <option name="ECMAScript6" value="false" />
             <option name="HAML" value="false" />
             <option name="HTML" value="false" />
             <option name="Handlebars" value="false" />
@@ -45,13 +43,12 @@
             <option name="XML" value="false" />
         </context>
     </template>
-    <template name="Typoscript | dataProcessing | menu and query" value="tt_content.myctype {&#10;    templateName = FE_Subpagemenu&#10;    dataProcessing {&#10;        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor&#10;        10 {&#10;            special = directory&#10;            levels = 2&#10;            expandAll = 1&#10;            as = subpages&#10;&#10;            dataProcessing {&#10;                10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor&#10;                10 {&#10;                    table = tt_content&#10;                    pidInList.field = uid&#10;                    where = colPos = 1 AND hidden = 0&#10;                    orderBy = sorting&#10;                    as = heroitem&#10;                    dataProcessing {&#10;                        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor&#10;                        20 {&#10;                            references.fieldName = image&#10;                            as = headerimages&#10;                        }&#10;                    }&#10;                }&#10;&#10;                20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor&#10;                20 {&#10;                    table = tt_content&#10;                    pidInList.field = uid&#10;                    where = colPos = 0 AND hidden = 0&#10;                    orderBy = sorting&#10;                    as = firstcontent&#10;                    max = 1&#10;                }&#10;            }&#10;        }&#10;    }&#10;}" description="Example how to use Menu Proceccor to render Content" toReformat="true" toShortenFQNames="true">
+    <template name="Typoscript | dataProcessing | menu and query" value="tt_content.myctype {&#10;    templateName = FE_Subpagemenu&#10;    dataProcessing {&#10;        10 = menu&#10;        10 {&#10;            special = directory&#10;            levels = 2&#10;            expandAll = 1&#10;            as = subpages&#10;&#10;            dataProcessing {&#10;                10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor&#10;                10 {&#10;                    table = tt_content&#10;                    pidInList.field = uid&#10;                    where = colPos = 1 AND hidden = 0&#10;                    orderBy = sorting&#10;                    as = heroitem&#10;                    dataProcessing {&#10;                        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor&#10;                        20 {&#10;                            references.fieldName = image&#10;                            as = headerimages&#10;                        }&#10;                    }&#10;                }&#10;&#10;                20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor&#10;                20 {&#10;                    table = tt_content&#10;                    pidInList.field = uid&#10;                    where = colPos = 0 AND hidden = 0&#10;                    orderBy = sorting&#10;                    as = firstcontent&#10;                    max = 1&#10;                }&#10;            }&#10;        }&#10;    }&#10;}" description="Example how to use Menu Proceccor to render Content" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Bash" value="false" />
             <option name="CSS" value="false" />
             <option name="CUCUMBER_FEATURE_FILE" value="false" />
             <option name="CoffeeScript" value="false" />
-            <option name="ECMAScript6" value="false" />
             <option name="HAML" value="false" />
             <option name="HTML" value="false" />
             <option name="Handlebars" value="false" />
