@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.2.2]
+
+### Changed
+
+- Plugin compability up to PHPStorm 2024.3.*
+
 ## [1.1.0]
 
 ### Added
