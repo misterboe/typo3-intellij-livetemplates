@@ -4,11 +4,23 @@
 
 ## [Unreleased]
 
+## [1.2.4]
+
+### Changed
+
+- Extended plugin compatibility to support IntelliJ-based IDEs from 2024.3 up to 2025.1 EAP
+
+## [1.2.3]
+
+### Changed
+
+- Maintenance release with updated dependencies
+
 ## [1.2.2]
 
 ### Changed
 
-- Plugin compability up to PHPStorm 2024.3.*
+- Plugin compability up to PHPStorm 2024.3.\*
 
 ## [1.1.0]
 
@@ -64,7 +76,10 @@
 
 - Update for the compatibility of the latest IDE versions
 
-[Unreleased]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v1.2.4...HEAD
+[1.2.4]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v1.2.3...v1.2.4
+[1.2.3]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v1.2.2...v1.2.3
+[1.2.2]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v1.1.0...v1.2.2
 [1.1.0]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v0.0.0...v1.1.0
 [0.0.11]: https://github.com/misterboe/typo3-intellij-livetemplates/commits/v0.0.11
 [0.0.10]: https://github.com/misterboe/typo3-intellij-livetemplates/compare/v0.0.11...v0.0.10
